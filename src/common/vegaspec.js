@@ -11,7 +11,7 @@ const makeVegaSpec = ({
 }) => ({
   "width":885,
   "height":639,
-  "data":[
+  "data": [
     {
       "name":"backendChoropleth",
       "format":"polys",
@@ -20,7 +20,8 @@ const makeVegaSpec = ({
         WHERE (ST_XMax(flint_parce_pred_test.omnisci_geo) >= -83.75698168309283 
         AND ST_XMin(flint_parce_pred_test.omnisci_geo) <= -83.45231955083288 
         AND ST_YMax(flint_parce_pred_test.omnisci_geo) >= 42.946208131752456 
-        AND ST_YMin(flint_parce_pred_test.omnisci_geo) <= 43.1070188297042)"},
+        AND ST_YMin(flint_parce_pred_test.omnisci_geo) <= 43.1070188297042)"
+    },
     {
       "name": "backendChoropleth_stats",
       "source": "backendChoropleth",
@@ -28,7 +29,8 @@ const makeVegaSpec = ({
         {
           "type":"aggregate",
           "fields":["color","color","color","color"],
-          "ops":["min","max","avg","stddev"],"as":["mincol","maxcol","avgcol","stdcol"]
+          "ops":["min","max","avg","stddev"],
+          "as":["mincol","maxcol","avgcol","stdcol"]
         },
         {
           "type":"formula",
