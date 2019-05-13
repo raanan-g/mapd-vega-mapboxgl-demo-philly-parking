@@ -9,6 +9,7 @@ import {initMap} from './components/map'
 import initSlider from './components/slider'
 import {initDateReadOut} from './components/dateReadOut'
 import initPlayPause from './components/playPauseControl'
+//import initLineChart from './components/lineChart'
 
 import mapdLogo from './images/mapd-logo.png';
 
@@ -21,7 +22,7 @@ function main() {
     <div class="header">
       <img class="logo" height='75px' width='75px' />
       <div class="title-slider">
-        <h2 class="title">Parking Violations by Month: Philadelphia</h2>
+        <h2 class="title">Status of Lead Service Line Replacements in Flint, MI</h2>
         <div class="slider-controls">
           <input class='slider' type='range' min='0' max='11' step='1' value='0' />
           <button class="play-pause">PLAY</button>
@@ -38,6 +39,9 @@ function main() {
   // create the mapboxgl map
   const map = initMap()
 
+  // create the line chart
+  //const lineChart = initLineChart()
+  
   // set up the slider
   const slider = initSlider()
 
